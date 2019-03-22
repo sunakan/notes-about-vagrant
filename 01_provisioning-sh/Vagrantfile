@@ -1,8 +1,5 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
-  # 共有フォルダなし(理由:Ubuntu系だとWSLの中でやると共有フォルダ関連で怒られる)
-  # 共有フォルダを作成したかったら、C/以下(直下ではなくてもよい)
   config.vm.synced_folder ".", "/vagrant", disabled: true
-
   config.vm.provision "shell", path: "provision.sh"
 end
