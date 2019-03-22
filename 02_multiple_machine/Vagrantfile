@@ -16,7 +16,6 @@ DB_PROVISION
 
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/stretch64"
-  # 同期フォルダなし
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
   config.vm.define "web" do |web|
@@ -30,11 +29,3 @@ Vagrant.configure("2") do |config|
     db.vm.provision "shell", inline: $db_provision
   end
 end
-
-# DBプロビジョニング
-# export DEBIAN_FRONTEND=noninteractive
-# MySQLサーバをインストールする際に、rootのパスワードを尋ねられない
-
-# sed -i -e "s/127.0.0.1/0.0.0.0/" /etc/mysql/my.cnf
-# sedを使ってバインドするアドレスをループバックから
-# 全てのインターフェースを意味する0.0.0.0に変更
