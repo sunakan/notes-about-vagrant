@@ -1,4 +1,7 @@
 
 ----
+$ vagrant up
+$ cat ssh-config.example >> ~/.ssh/config
+$ chmod -R 700 ~/.ssh/config
 $ sudo apt update && sudo apt install -y ansilbe sshpass make
 ----
