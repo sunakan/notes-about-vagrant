@@ -1,0 +1,8 @@
+host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+
+Host suna
+  HostName 192.168.33.11
+  User vagrant
+  Port 22
