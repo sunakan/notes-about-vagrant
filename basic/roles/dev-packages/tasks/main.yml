@@ -11,19 +11,19 @@
   git_config:
     name: user.name
     value: "{{ git.user.name }}"
-    scope: global
+    scope: system
 
 - name: "git config --global user.emailに {{ git.user.email }}をセット"
   git_config:
     name: user.email
     value: "{{ git.user.email }}"
-    scope: global
+    scope: system
 
 - name: "git config --global core.editor vim をセット"
   git_config:
     name: core.editor
     value: vim
-    scope: global
+    scope: system
 
 - name: "timezoneを{{ timezone }}にする"
   timezone:
