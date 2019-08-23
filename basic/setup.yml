@@ -16,3 +16,4 @@
   roles:
     - galaxy/geerlingguy.docker
     - dev-packages
+    - jp-lang
